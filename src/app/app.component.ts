@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
         title: 'Archibald',
         description: 'Mon meilleur ami depuis tout petit',
         createdDate: new Date(),
-        snaps: 0,
+        snaps: 210,
         imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
         location: 'Paris'
       },
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
         title: 'Yann',
         description: 'Mes plus belle vacances',
         createdDate: new Date(),
-        snaps: 10,
+        snaps: 150,
         imageUrl: 'https://cdn.pixabay.com/user/2013/11/05/02-10-23-764_250x250.jpg',
         location: 'La montagne'
       },
