@@ -8,7 +8,7 @@ export class FaceSnapsService {
     faceSnaps: FaceSnap[] = [
 
         {
-
+            id: 1,
             title: 'Archibald',
             description: 'Mon meilleur ami depuis tout petit',
             createdDate: new Date(),
@@ -17,6 +17,7 @@ export class FaceSnapsService {
             location: 'Paris'
         },
         {
+            id: 2,
             title: 'Yann',
             description: 'Mes plus belle vacances',
             createdDate: new Date(),
@@ -25,6 +26,7 @@ export class FaceSnapsService {
             location: 'La montagne'
         },
         {
+            id: 3,
             title: 'Camille',
             description: 'Je ne sais pas pourquoi il y a cette photo',
             createdDate: new Date(),
@@ -32,7 +34,7 @@ export class FaceSnapsService {
             imageUrl: 'https://cdn.pixabay.com/user/2015/10/16/09-28-45-303_250x250.png',
         },
         {
-
+            id: 4,
             title: 'Archibald',
             description: 'Mon meilleur ami depuis tout petit',
             createdDate: new Date(),
@@ -41,6 +43,7 @@ export class FaceSnapsService {
             location: 'Paris'
         },
         {
+            id: 5,
             title: 'Yann',
             description: 'Mes plus belle vacances',
             createdDate: new Date(),
@@ -49,6 +52,7 @@ export class FaceSnapsService {
             location: 'La montagne'
         },
         {
+            id: 6,
             title: 'Camille',
             description: 'Je ne sais pas pourquoi il y a cette photo',
             createdDate: new Date(),
@@ -56,4 +60,19 @@ export class FaceSnapsService {
             imageUrl: 'https://cdn.pixabay.com/user/2015/10/16/09-28-45-303_250x250.png',
         }
     ]
+    getAllFaceSnaps(): FaceSnap[] {
+        return this.faceSnaps;
+    }
+    getFaceSnapById(faceSnapId: number): FaceSnap {
+        const faceSnap = this.faceSnaps.find(faceSnap => faceSnap.id === faceSnapId);
+        if (!faceSnap) {
+            throw new Error('FaceSnap not found')
+        } else {
+            return faceSnap;
+        }
+    }
+    snapFaceSnapById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void {
+        const faceSnap = this.getFaceSnapById(faceSnapId)
+        snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--
+    }
 }
