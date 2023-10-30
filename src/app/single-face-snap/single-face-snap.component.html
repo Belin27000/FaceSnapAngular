@@ -3,6 +3,7 @@
     <p>{{0.477|percent}}</p>
     <p>{{360|currency:'code': 'EUR'}}</p>
     <h2>{{faceSnap.title | titlecase}}</h2>
+    <a routerLink="/faceSnaps">Back</a>
     <p>Mis en ligne le {{faceSnap.createdDate |date: 'd MMMM yyyy, à HH:mm'}}</p>
     <img [src]=" faceSnap.imageUrl" [alt]="faceSnap.title" />
     <p>{{faceSnap.description}}</p>

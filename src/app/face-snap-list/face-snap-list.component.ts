@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FaceSnap } from '../models/face-snaps-model';
 import { FaceSnapsService } from '../services/face-snaps.service';
 
@@ -9,7 +9,7 @@ import { FaceSnapsService } from '../services/face-snaps.service';
   styleUrls: ['./face-snap-list.component.scss']
 })
 export class FaceSnapListComponent implements OnInit {
-  faceSnaps!: FaceSnap[];
+  @Input() faceSnaps!: FaceSnap[];
 
   constructor(private faceSnapService: FaceSnapsService) { }
 
