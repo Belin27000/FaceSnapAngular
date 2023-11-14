@@ -29,6 +29,7 @@ export class FaceSnapComponent implements OnInit {
       this.buttonText = 'Oh Snap!'
     }
   }
+
   onViewFaceSnap() {
     this.router.navigateByUrl(`facesnaps/${this.faceSnap.id}`);
   }
